@@ -1,5 +1,6 @@
 ## Run Hadoop and Spark Cluster within Docker Containers
 > 一直在模仿，抄 github 和呼吸一样，感谢开源
+>
 > 山寨项目： https://github.com/kiwenlau/hadoop-cluster-docker
 
 
@@ -33,7 +34,7 @@ sudo ./start-container.sh
 start spark-master container...
 start spark-slave1 container...
 start spark-slave2 container...
-root@spark-master:~# 
+root@spark-master:~#
 ```
 - start 3 containers with 1 master and 2 slaves
 - you will get into the /root directory of spark-master container
@@ -84,7 +85,7 @@ sudo ./start-container.sh 5
 ```
 - use the same parameter as the step 2
 
-##### 4. run spark cluster 
+##### 4. run spark cluster
 
 do 5~6 like section A
 
