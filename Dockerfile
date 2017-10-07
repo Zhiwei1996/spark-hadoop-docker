@@ -64,11 +64,12 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
     mv /tmp/hadoop-slaves $HADOOP_HOME/etc/hadoop/slaves && \
     mv /tmp/spark-slaves $SPARK_HOME/conf/slaves && \
-    mv /tmp/start-hadoop.sh ~/start-hadoop.sh && \
+    mv /tmp/start-spark-hadoop.sh ~/start-spark-hadoop.sh && \
+    mv /tmp/stop-spark-hadoop.sh ~/stop-spark-hadoop.sh && \
     mv /tmp/run-wordcount.sh ~/run-wordcount.sh
 
 # add hadoop cluster start shell
-RUN chmod +x ~/start-hadoop.sh && \
+RUN chmod +x ~/start-spark-hadoop.sh && \
     chmod +x ~/run-wordcount.sh && \
     chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
     chmod +x $HADOOP_HOME/sbin/start-yarn.sh

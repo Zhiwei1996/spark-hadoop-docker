@@ -9,10 +9,17 @@ sudo docker rm -f spark-master &> /dev/null
 echo "start spark-master container..."
 sudo docker run -itd \
                 --net=spark \
-                -P \
+                -p 50070:50070 \
+                -p 8080:8080 \
+                -p 9000:9000 \
+                -p 18040:18040 \
+                -p 18030:18030 \
+                -p 18025:18025 \
+                -p 18141:18141 \
+                -p 18088:18088 \
                 --name spark-master \
                 --hostname spark-master \
-                zhiweio/spark-hadoop:1.0 &> /dev/null
+                zhiwei1997/spark-hadoop:1.0 &> /dev/null
 
 
 # start spark slave container
@@ -25,7 +32,7 @@ do
 	                --net=spark \
 	                --name spark-slave$i \
 	                --hostname spark-slave$i \
-	                zhiweio/spark-hadoop:1.0 &> /dev/null
+	                zhiwei1997/spark-hadoop:1.0 &> /dev/null
 	i=$(( $i + 1 ))
 done
 
