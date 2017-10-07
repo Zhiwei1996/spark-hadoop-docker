@@ -23,6 +23,6 @@ echo ""
 echo -e "\nbuild docker spark image\n"
 
 # rebuild kiwenlau/hadoop image
-sudo docker build -t zhiwei1997/spark-hadoop:1.0 .
+sudo docker build -t zhiwei1997/spark-hadoop:1.1 .
 
 echo ""
