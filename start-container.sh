@@ -10,6 +10,7 @@ echo "start spark-master container..."
 sudo docker run -itd \
                 --net=spark \
                 -p 50070:50070 \
+                -p 4040:4040 \
                 -p 8080:8080 \
                 -p 9000:9000 \
                 -p 18040:18040 \
