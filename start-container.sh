@@ -9,15 +9,11 @@ sudo docker rm -f spark-master &> /dev/null
 echo "start spark-master container..."
 sudo docker run -itd \
                 --net=spark \
-                -p 50070:50070 \
+                -p 2222:22 \
                 -p 4040:4040 \
                 -p 8080:8080 \
-                -p 9000:9000 \
-                -p 18040:18040 \
-                -p 18030:18030 \
-                -p 18025:18025 \
-                -p 18141:18141 \
-                -p 18088:18088 \
+                -p 8088:8088 \
+                -p 50070:50070 \
                 --name spark-master \
                 --hostname spark-master \
                 zhiwei1997/spark-hadoop:1.1 &> /dev/null

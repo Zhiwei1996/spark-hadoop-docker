@@ -57,6 +57,7 @@ RUN mkdir $HADOOP_HOME/logs && \
 COPY config/* /tmp/
 
 RUN mv /tmp/ssh_config ~/.ssh/config && \
+    mv /tmp/sshd_config /etc/ssh && \
     mv /tmp/hadoop-env.sh /usr/local/hadoop/etc/hadoop/hadoop-env.sh && \
     mv /tmp/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml && \
     mv /tmp/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
