@@ -21,7 +21,7 @@ git clone https://github.com/Zhiwei1996/spark-hadoop-docker.git
 ##### 3. create spark network
 
 ```
-sudo docker network create --driver=bridge spark
+./create-network.sh
 ```
 
 ##### 4. start container
