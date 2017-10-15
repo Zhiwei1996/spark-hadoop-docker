@@ -7,8 +7,8 @@ WORKDIR  /root
 # change default apt source
 COPY config/sources.list /etc/apt/
 
-# install openssh-server, openjdk and wget
-RUN apt-get update &&  apt-get install -y openssh-server openjdk-8-jdk wget
+# install openssh-server, openjdk and common tools
+RUN apt-get update &&  apt-get install -y openssh-server openjdk-8-jdk wget vim
 
 # install hadoop 2.7.4
 RUN wget http://mirrors.hust.edu.cn/apache/hadoop/common/hadoop-2.7.4/hadoop-2.7.4.tar.gz && \
